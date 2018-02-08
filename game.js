@@ -102,8 +102,6 @@ function doKeyDown(evt){
       checkCollision();
       endGame();
       console.log("X: " + x + " and Y: " + y);
-      // endGame();
-      // console.log("right")
       if (collision == 1){
         x -= dx;
         collision = 0;
@@ -130,6 +128,7 @@ function checkCollision() {
 function endGame() {
   if (( x === 553 || x === 559) && (y === 553 || y === 559)) {
     console.log("endgame");
+    alert ("GAME OVER");
 
   }
 }
