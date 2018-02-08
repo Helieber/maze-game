@@ -1,0 +1,69 @@
+html{
+    height: 100%;;
+}
+
+body{
+    margin: 50px;
+    background-image: url("./images/mazeimage.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+
+}
+
+h1 {
+    color: whitesmoke;
+    
+}
+
+.logo {
+    text-align:center; 
+    margin: 50px 300px;
+    padding-top: 50px;
+}
+
+.button{
+    text-align:center; 
+    margin: 25px 50px;
+    /* fon */
+}
+
+#start-game-button {
+    border: 0;
+    box-shadow: 0;
+    background: linear-gradient(to bottom, #298546, #44DDBA);
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 30px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+#start-game-button a{
+    text-decoration: none;
+}
+
+.intro {
+    background-image: url("./images/mazeimage.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+#clock {
+    border: 2px solid #000;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 50px;
+    margin: 0 auto;
+    padding: 18px 0;
+    width: 130px;
+    text-align: center;
+    background-color: #fff;
+    position: fixed;
+    bottom: 77%;
+    left: 15%;
+}
+
+
