@@ -1,5 +1,5 @@
-var dx = 6;
-var dy = 6;
+var dx = 5;
+var dy = 5;
 var x = 25;
 var y = 25;
 var WIDTH = 592;
@@ -22,9 +22,7 @@ function rect(x,y,w,h) {
   ctx.rect(x,y,w,h);
   ctx.closePath();
   ctx.fill();
-  ctx.fillStyle = "black";
-  ctx.font= "10px Arial";
-  // ctx.fillText("Time: " + count + "s.", 5, 15);
+
 
 }  
 
@@ -50,7 +48,7 @@ function doKeyDown(evt){
     case 38:
     case 87: 
     if (y - dy > 0){
-      // console.log("im up")
+
       y -= dy;
       clear();
       checkCollision();
@@ -139,7 +137,7 @@ function endGame() {
 function draw() {
   clear();
   ctx.fillStyle = "green";
-  rect(x, y, 14,14);
+  rect(x, y, 15,15);
 }
 
 init();
@@ -148,7 +146,7 @@ window.addEventListener('keydown',doKeyDown,true);
 //Timer coding 
 
 document.getElementById('timer').innerHTML =
-  00 + ":" + 10;
+  02 + ":" + 30;
 startTimer();
 
 function startTimer() {
