@@ -12,7 +12,6 @@ var maze = [
   "https://78.media.tumblr.com/bad696c3db3dcaff9896684db2db4086/tumblr_p3sy89MwzO1u9sue7o2_1280.gif",
   "https://78.media.tumblr.com/b1d7850d60ec273490ea1ce0ea452c87/tumblr_p3sy89MwzO1u9sue7o5_1280.gif",
   "https://78.media.tumblr.com/32c82c84c949baa70e5dcc6319c1267e/tumblr_p3sy89MwzO1u9sue7o7_1280.gif",
-  "https://78.media.tumblr.com/a5805598c706bea9ef01aa79689ffaab/tumblr_p3sy89MwzO1u9sue7o3_1280.gif",
   "https://78.media.tumblr.com/2b623b7de8d9fda64453d79d03347b9d/tumblr_p3sy89MwzO1u9sue7o4_1280.gif",
   "https://78.media.tumblr.com/af1e347892663cdd75465783fb76456c/tumblr_p3sy89MwzO1u9sue7o6_1280.gif"
 ];
@@ -129,7 +128,6 @@ function doKeyDown(evt){
 function checkCollision() {
   var imgd = ctx.getImageData(x, y, 15, 15);
   var pix = imgd.data;
-  // console.log("Im in collision")
   for (var i = 0; n = pix.length, i < n; i += 4) {
     if (pix[i] == 0) {
       collision = 1;
