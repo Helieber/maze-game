@@ -139,9 +139,8 @@ function checkCollision() {
 
 
 function endGame() {
-  if (( x === 553 || x === 559) && (y === 553 || y === 559)) {
-    console.log("endgame");
-    alert ("GAME OVER");
+  if (( x > 553) && (y >553)) {
+    $('#modal-win').modal('show');
     
 
   }
@@ -151,6 +150,8 @@ function draw() {
   clear();
   ctx.fillStyle = "green";
   rect(x, y, 15,15);
+  ctx.fillStyle = "black";
+  rect(553,553,15,15);
 }
 
 init();
@@ -159,7 +160,7 @@ window.addEventListener('keydown',doKeyDown,true);
 //Timer coding 
 
 document.getElementById('timer').innerHTML =
-  0 + ":" + 10;
+  02 + ":" + 30;
 startTimer();
 
 function startTimer() {
