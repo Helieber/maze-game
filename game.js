@@ -17,7 +17,7 @@ var maze = [
   "https://78.media.tumblr.com/af1e347892663cdd75465783fb76456c/tumblr_p3sy89MwzO1u9sue7o6_1280.gif"
 ];
 
-var soundTrack = new Audio("./sound/Sounds From The Ground - This Land.mp3");
+var soundTrack = new Audio("music.mp3");
 soundTrack.loop = true;
 soundTrack.play();
 
