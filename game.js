@@ -17,6 +17,14 @@ var maze = [
   "https://78.media.tumblr.com/af1e347892663cdd75465783fb76456c/tumblr_p3sy89MwzO1u9sue7o6_1280.gif"
 ];
 
+var soundTrack = new Audio("./sound/Sounds From The Ground - This Land.mp3");
+soundTrack.loop = true;
+soundTrack.play();
+
+// var modal = getElementsByClassName('modal');
+
+
+
 function rect(x,y,w,h) {
   ctx.beginPath();
   ctx.rect(x,y,w,h);
@@ -37,8 +45,13 @@ function init() {
   var random = Math.floor(Math.random() * 7);
   console.log("random", random);
   img.src = maze[random];
-  return setInterval(draw, 10);
+  // return setInterval(draw, 10);
+  return handle;
 }
+
+var handle = setInterval(function(){
+  draw();
+}, 10);
 
 
 function doKeyDown(evt){
@@ -129,6 +142,7 @@ function endGame() {
   if (( x === 553 || x === 559) && (y === 553 || y === 559)) {
     console.log("endgame");
     alert ("GAME OVER");
+    
 
   }
 }
@@ -145,7 +159,7 @@ window.addEventListener('keydown',doKeyDown,true);
 //Timer coding 
 
 document.getElementById('timer').innerHTML =
-  02 + ":" + 30;
+  0 + ":" + 10;
 startTimer();
 
 function startTimer() {
@@ -153,15 +167,18 @@ function startTimer() {
   var timeArray = presentTime.split(/[:]+/);
   var m = timeArray[0];
   var s = checkSecond((timeArray[1] - 1));
-  if(s==59){
-    m=m-1
+  if(s == 59){
+    m = m - 1
   } 
   
-  if ( m == "0" && s == "00"){
-    m = 0;
-    s = 0
-    alert ("GAME OVER");
-
+  if ( m == 0 && s == 0 ){
+    
+    document.getElementById('timer').innerHTML =
+    m + ":00";  
+    $('.modal').modal('show');
+    return s = 0;
+    return m = 0;
+    
   }
 
   //if(m<0){alert('timer completed')}
@@ -169,14 +186,16 @@ function startTimer() {
   document.getElementById('timer').innerHTML =
     m + ":" + s;
   setTimeout(startTimer, 1000);
+  // clearInterval(handle);
 }
 
 function checkSecond(sec) {
   // add zero in front of numbers < 10
   if (sec < 10 && sec >= 0) {
     sec = "0" + sec
-  }; 
-  if (sec < 0) {sec = "59"};
-  return sec;
+  } else if (sec < 0) {
+    sec = "59"
+  }
+    return sec;
 }
 // End of Timer Ending

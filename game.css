@@ -7,9 +7,6 @@ body{
     background-image: url("./images/mazeimage.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    
-
-
 }
 
 h1 {
@@ -18,22 +15,38 @@ h1 {
     font-weight: bold;
     font-size: 50px;
     background-color: rgb(12, 66, 12);
-    
-    
+    padding-top: 20px;
+    padding-bottom: 20px; 
 }
+
+#maze {
+    text-decoration: none;
+    color: white;
+}
+
+#maze:hover {
+    text-decoration:none;
+    color: gray;
+}
+#again {
+    text-decoration: none;
+    color: white;
+}
+
+
 .gameHead{
     margin: -30px;
     padding-bottom: 20px; 
 }
 
 .logo {
-    text-align:center; 
+    text-align: center; 
     margin: 0px 300px;
     padding-top: 0 px;
 }
 
 .button{
-    text-align:center; 
+    text-align: center; 
     margin: 25px 50px;
     /* fon */
 }
@@ -41,7 +54,7 @@ h1 {
 #start-game-button {
     border: 0;
     box-shadow: 0;
-    background: linear-gradient(to bottom, #298546, #44DDBA);
+    background: linear-gradient(to bottom, #104621, #44DDBA);
     color: #fff;
     padding: 20px 40px;
     font-size: 30px;
@@ -61,18 +74,25 @@ h1 {
 }
 
 #clock {
-    border: 2px solid #000;
-    border-radius: 20px;
+    color: floralwhite;
+    font-size: 20px;
+    border: 2px solid rgb(251, 250, 250);
+    border-radius: 15px;
     box-sizing: border-box;
-    height: 40px;
-    margin: 0 auto;
-    padding: 10px 0;
+    height: 68px;
+    padding: 5px 0;
     width: 140px;
     text-align: center;
-    background-color: #fff;
+    background-color: rgb(29, 87, 22);
     position: fixed;
-    bottom: 75%;
-    left: 14%;
+    bottom: 74%;
+    left: 15%;
 }
-
-
+.modal {
+    text-align: center;
+    position: fixed;
+    /* bottom: 50%; */
+    /* z-index: 1; */
+    top: 35%;
+    left: 0%;
+}
